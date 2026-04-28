@@ -1,0 +1,18 @@
+{
+  "bridges": [
+    {
+      "tiles": [
+        [1,5],
+        [2,5]
+      ],
+      "initially_active": true
+    }
+  ],
+  "hard_switches": [
+    {
+      "pos": [7,7],
+      "controls_bridge_index": 0,
+      "action": "close"
+    }
+  ]
+}

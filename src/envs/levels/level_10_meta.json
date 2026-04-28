@@ -1,0 +1,37 @@
+{
+  "bridges": [
+    {
+      "tiles": [
+        [2,4],
+        [2,5]
+      ],
+      "initially_active": false
+    },
+    {
+      "tiles": [
+        [2,7],
+        [2,8],
+        [3,13],
+        [4,13]
+      ],
+      "initially_active": false
+    }
+  ],
+  "soft_switches": [
+    {
+      "pos": [10,12],
+      "controls_bridge_index": 1,
+      "action": "toggle"
+    }
+  ],
+  "hard_switches": [
+    {
+      "pos": [10,6],
+      "controls_bridge_index": 0,
+      "action": "toggle"
+    }
+  ],
+  "splits": [
+    { "trigger": [2, 13], "dest_a": [2, 13], "dest_b": [2, 10] }
+  ]
+}

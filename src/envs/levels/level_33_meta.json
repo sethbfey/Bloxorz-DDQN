@@ -1,0 +1,93 @@
+{
+  "bridges": [
+    {
+      "tiles": [
+        [2,12]
+      ],
+      "initially_active": false
+    },
+    {
+      "tiles": [
+        [4,4],
+        [4,5]
+      ],
+      "initially_active": true
+    },
+    {
+      "tiles": [
+        [8,4],
+        [8,5]
+      ],
+      "initially_active": true
+    }
+  ],
+  "soft_switches": [
+    {
+      "pos": [8,15],
+      "controls_bridge_index": 0,
+      "action": "open"
+    }
+  ],
+  "hard_switches": [
+    {
+      "pos": [1,8],
+      "controls_bridge_index": 2,
+      "action": "close"
+    },
+    {
+      "pos": [3,6],
+      "controls_bridge_index": 2,
+      "action": "close"
+    },
+    {
+      "pos": [3,9],
+      "controls_bridge_index": 2,
+      "action": "close"
+    },
+    {
+      "pos": [4,10],
+      "controls_bridge_index": 2,
+      "action": "close"
+    },
+    {
+      "pos": [4,11],
+      "controls_bridge_index": 2,
+      "action": "close"
+    },
+    {
+      "pos": [4,14],
+      "controls_bridge_index": 2,
+      "action": "close"
+    },
+    {
+      "pos": [5,8],
+      "controls_bridge_index": 2,
+      "action": "close"
+    },
+    {
+      "pos": [5,11],
+      "controls_bridge_index": 2,
+      "action": "close"
+    },
+    {
+      "pos": [6,12],
+      "controls_bridge_index": 2,
+      "action": "close"
+    },
+    {
+      "pos": [7,12],
+      "controls_bridge_index": 2,
+      "action": "close"
+    },
+    {
+      "pos": [8,14],
+      "controls_bridge_index": 2,
+      "action": "close"
+    },
+    {
+      "pos": [8,7],
+      "controls_bridge_index": 2,
+      "action": "close"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "bridges": [
+    {
+      "tiles": [
+        [2,6],
+        [2,7]
+      ],
+      "initially_active": true
+    },
+    {
+      "tiles": [
+        [2,11],
+        [2,12]
+      ],
+      "initially_active": false
+    },
+    {
+      "tiles": [
+        [7,11],
+        [7,12]
+      ],
+      "initially_active": false
+    }
+  ],
+  "hard_switches": [
+    {
+      "pos": [5,10],
+      "controls_bridge_index": 0,
+      "action": "close"
+    },
+    {
+      "pos": [3,8],
+      "controls_bridge_index": 0,
+      "action": "close"
+    },
+    {
+      "pos": [5,4],
+      "controls_bridge_index": 0,
+      "action": "close"
+    },
+    {
+      "pos": [7,13],
+      "controls_bridge_index": 2,
+      "action": "toggle"
+    },
+    {
+      "pos": [8,2],
+      "controls_bridge_index": 1,
+      "action": "toggle"
+    }
+  ],
+  "splits": [
+    { "trigger": [5, 8], "dest_a": [2, 14], "dest_b": [8, 14] }
+  ]
+}

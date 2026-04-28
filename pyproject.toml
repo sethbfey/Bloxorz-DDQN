@@ -1,0 +1,15 @@
+[project]
+name = "bloxorz-rl"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13.5"
+dependencies = [
+    "fastapi>=0.115.0",
+    "gymnasium>=1.3.0",
+    "numpy>=2.4.4",
+    "pygame>=2.6.1",
+    "tensorboard>=2.20.0",
+    "torch>=2.11.0",
+    "uvicorn>=0.34.0",
+]

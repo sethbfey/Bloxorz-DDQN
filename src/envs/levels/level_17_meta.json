@@ -1,0 +1,54 @@
+{
+  "bridges": [
+    {
+      "tiles": [[2,10]],
+      "initially_active": false
+    },
+    {
+      "tiles": [[3,8]],
+      "initially_active": false
+    },
+    {
+      "tiles": [[7,7]],
+      "initially_active": false
+    },
+    {
+      "tiles": [[8,9]],
+      "initially_active": false
+    }
+  ],
+  "soft_switches": [
+    {
+      "pos": [4,13],
+      "controls_bridge_index": 2,
+      "action": "close"
+    },
+    {
+      "pos": [4,14],
+      "controls_bridge_index": 2,
+      "action": "open"
+    },
+    {
+      "pos": [10,13],
+      "controls_bridge_index": 3,
+      "action": "close"
+    },
+    {
+      "pos": [10,13],
+      "controls_bridge_index": 0,
+      "action": "open"
+    },
+    {
+      "pos": [7,13],
+      "controls_bridge_index": 1,
+      "action": "open"
+    }
+  ],
+  "hard_switches": [
+    {
+      "pos": [9,2],
+      "controls_bridge_index": 3,
+      "action": "toggle"
+    }
+  ]
+}

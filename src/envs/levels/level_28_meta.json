@@ -1,0 +1,31 @@
+{
+  "bridges": [
+    {
+      "tiles": [
+        [1,4],
+        [1,5],
+        [10,9],
+        [10,10]
+      ],
+      "initially_active": true
+    },
+    {
+      "tiles": [[7,15]],
+      "initially_active": true
+    },
+    {
+      "tiles": [[10,13]],
+      "initially_active": true
+    }
+  ],
+  "hard_switches": [
+    {
+      "pos": [8,12],
+      "controls_bridge_index": 0,
+      "action": "close"
+    }
+  ],
+  "splits": [
+    { "trigger": [6, 12], "dest_a": [7, 15], "dest_b": [10, 13] }
+  ]
+}

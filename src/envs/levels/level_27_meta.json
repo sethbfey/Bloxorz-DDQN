@@ -1,0 +1,36 @@
+{
+  "bridges": [
+    {
+      "tiles": [[10,7]],
+      "initially_active": true
+    },
+    {
+      "tiles": [[10,10]],
+      "initially_active": true
+    }
+  ],
+  "soft_switches": [
+    {
+      "pos": [4,14],
+      "controls_bridge_index": 0,
+      "action": "close"
+    },
+    {
+      "pos": [4,14],
+      "controls_bridge_index": 1,
+      "action": "close"
+    }
+  ],
+  "hard_switches": [
+    {
+      "pos": [6,14],
+      "controls_bridge_index": 1,
+      "action": "close"
+    },
+    {
+      "pos": [6,13],
+      "controls_bridge_index": 0,
+      "action": "close"
+    }
+  ]
+}
