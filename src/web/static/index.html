@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLOXORZ RL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <!-- ── INTRO ─────────────────────────────────────────────────── -->
+  <div id="screen-intro" class="screen active">
+    <canvas id="intro-bg" class="intro-bg"></canvas>
+    <div class="intro-content">
+      <div id="intro-word" class="intro-word"></div>
+      <div class="intro-sub">REINFORCEMENT LEARNING</div>
+    </div>
+    <div class="press-key" id="press-key">PRESS ANY KEY</div>
+  </div>
+
+  <!-- ── LEVEL SELECT ───────────────────────────────────────────── -->
+  <div id="screen-select" class="screen">
+    <header class="select-header">
+      <span class="header-logo" id="header-logo" title="Back to intro">BLOXORZ <em>RL</em></span>
+      <div class="mode-tabs">
+        <button id="tab-play"  class="tab active" data-mode="play">PLAY</button>
+        <button id="tab-watch" class="tab"         data-mode="watch">WATCH</button>
+      </div>
+    </header>
+    <div id="level-grid" class="level-grid"></div>
+  </div>
+
+  <!-- ── LEVEL TRANSITION ───────────────────────────────────────── -->
+  <div id="screen-transition" class="screen">
+    <div class="trans-inner" id="trans-inner">
+      <div class="trans-stage">STAGE</div>
+      <div class="trans-num" id="trans-num">01</div>
+    </div>
+  </div>
+
+  <!-- ── GAME ──────────────────────────────────────────────────── -->
+  <div id="screen-game" class="screen">
+
+    <!-- Left HUD panel -->
+    <aside class="game-hud">
+      <div class="hud-logo">BLOXORZ<em>RL</em></div>
+      <div class="hud-level" id="hud-level">LEVEL 01</div>
+
+      <div class="hud-block">
+        <div class="hud-label">MOVES</div>
+        <div class="hud-val" id="hud-steps">0</div>
+      </div>
+      <div class="hud-block" id="hud-play-best-row">
+        <div class="hud-label">YOUR BEST</div>
+        <div class="hud-val dim" id="hud-best">--</div>
+      </div>
+      <div class="hud-block" id="hud-agent-best-row">
+        <div class="hud-label">AGENT BEST</div>
+        <div class="hud-val dim" id="hud-agent-best">--</div>
+      </div>
+
+      <div class="hud-sep"></div>
+      <button class="hud-btn" id="btn-hint" style="display:none">? HINT</button>
+      <button class="hud-btn" id="btn-restart">↺ RESTART</button>
+      <button class="hud-btn" id="btn-levels">← LEVELS</button>
+      <button class="hud-btn" id="btn-home">⌂ HOME</button>
+      <button class="hud-btn" id="btn-next-level" style="display:none">→ NEXT</button>
+    </aside>
+
+    <!-- Canvas area -->
+    <div class="game-wrap" id="game-wrap">
+      <canvas id="game-canvas"></canvas>
+      <div class="hint-overlay" id="hint-overlay">
+        <div class="hint-title">OPTIMAL SOLUTION</div>
+        <div class="hint-moves" id="hint-moves"></div>
+      </div>
+    </div>
+
+    <!-- Watch controls bar (hidden in play mode) -->
+    <div class="watch-bar" id="watch-bar">
+      <button class="w-btn" id="w-prev" title="Step back">◀◀</button>
+      <button class="w-btn" id="w-play" title="Play/Pause">▶</button>
+      <button class="w-btn" id="w-next" title="Step forward">▶▶</button>
+      <div class="w-progress">
+        <input type="range" id="w-scrub" min="0" value="0" step="1" class="scrub">
+      </div>
+      <div class="w-step-info">
+        <span id="w-cur">0</span><span class="dim"> / </span><span id="w-tot">0</span>
+      </div>
+      <div class="w-speed-wrap">
+        <span class="hud-label">SPEED</span>
+        <input type="range" id="w-speed" min="0.25" max="4" step="0.25" value="1" class="speed-range">
+        <span class="hud-val" id="w-speed-val">1×</span>
+      </div>
+    </div>
+
+    <!-- Win / Fall result overlay -->
+    <div class="result-overlay" id="result-overlay">
+      <div class="result-text" id="result-text"></div>
+      <div class="result-sub"  id="result-sub"></div>
+      <div class="result-actions" id="result-actions"></div>
+    </div>
+
+  </div><!-- /screen-game -->
+
+  <script src="/js/renderer.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
