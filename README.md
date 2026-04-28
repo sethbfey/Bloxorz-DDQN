@@ -9,7 +9,7 @@ The original version of the game developed by Damien Clarke in 2007 is no longer
 ## The Repo
 
 Contributions:
-* **DQN Agent**: In this work, I created a simple double DQN network to sucessfully solve all 33 levels of Bloxorz. While successful, the Bloxorz agent did not always achieve the optimal move-sets. 
+* **DQN Agent**: In this work, I created a simple double DQN network to sucessfully solve all 33 levels of Bloxorz. While successful, the Bloxorz agent did not always achieve the optimal move-sets.
 * **Bloxorz Level Dynamics**: Under `src/envs/levels/`, I recreated all 33 levels to its entirety using `.txt` for the tile layout and `.json` files for handling the dynamics of each mechanism.
 * **A Web Demo**: I enlisted Claude to create a web server for manual play (see `src/scripts/play.py` for a simpler, 2D manual play) and to watch the DQN agents (see `src/sripts/replay.py` for a simpler, 2D replay). 
 * **Scalability**: If desired, this framework warrants a straighforward creation schema and manual testing of custom Bloxorz levels.
@@ -45,3 +45,8 @@ uv run python src/scripts/play.py --level 1
 ```
 
 Arrow keys or WASD. `R` to restart and `Q` to quit.
+
+## Future Implementations
+
+- Creating a general DDQN agent rather than per-level agents
+- More complex RL training for optimal move-sets
